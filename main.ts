@@ -5,6 +5,7 @@ input.onButtonPressed(Button.B, function () {
     rope += 0.1
 })
 let rope = 2
+music.startMelody(music.builtInMelody(Melodies.Chase), MelodyOptions.Once)
 basic.forever(function () {
     basic.clearScreen()
     led.plot(Math.round(rope), 2)
@@ -15,7 +16,6 @@ basic.forever(function () {
         basic.showString("B win")
         music.startMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once)
     } else {
-        basic.showString("try again")
-        music.startMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once)
+        basic.showString(" Keep it up!")
     }
 })
